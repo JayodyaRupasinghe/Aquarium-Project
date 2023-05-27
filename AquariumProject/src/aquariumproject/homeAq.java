@@ -99,7 +99,6 @@ public class homeAq extends javax.swing.JFrame {
 
         jMenu2.setText("SUPPLIER");
 
-        jMenuItem8.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/add.png"))); // NOI18N
         jMenuItem8.setText("ADD");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +115,6 @@ public class homeAq extends javax.swing.JFrame {
 
         PRODUCT.setText("PRODUCT");
 
-        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/add.png"))); // NOI18N
         jMenuItem4.setText("ADD NEW");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +124,6 @@ public class homeAq extends javax.swing.JFrame {
         });
         PRODUCT.add(jMenuItem4);
 
-        jMenuItem5.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jMenuItem5.setText("UPDATE");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,11 +132,9 @@ public class homeAq extends javax.swing.JFrame {
         });
         PRODUCT.add(jMenuItem5);
 
-        jMenuItem6.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jMenuItem6.setText("DELETE");
         PRODUCT.add(jMenuItem6);
 
-        jMenuItem7.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         jMenuItem7.setText("VIEW");
         PRODUCT.add(jMenuItem7);
 
@@ -151,6 +146,7 @@ public class homeAq extends javax.swing.JFrame {
         setJMenuBar(jMenuBar1);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
