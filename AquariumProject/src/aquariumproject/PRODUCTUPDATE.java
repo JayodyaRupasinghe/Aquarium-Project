@@ -15,7 +15,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 public class PRODUCTUPDATE extends javax.swing.JFrame {
-
+String pno,pname,cprice,nprice,sprice,quanty;
     /**
      * Creates new form PRODUCTUPDATE
      */
@@ -195,6 +195,7 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 700, 510));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -234,7 +235,7 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       String pno,pname,cprice,nprice,sprice,quanty;
+       
                 try
                 {
                     pno=jTextField1.getText();
@@ -267,7 +268,7 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
            String qry = "SELECT pname, cprice, nprice, sprice, quanty FROM product where pno='"+pno+"'";
            
            rs=st.executeQuery(qry);
-           String name = jTextField2.setText(pname);
+           jTextField2.setText(pname);
            
            rs.next();
            
@@ -285,8 +286,8 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
 //        String sprice=jTextField5.getText();
 //        String quanty=jTextField6.getText();
         
-String cn=fn+" "+ln;
-jLabel3.setText("Welcome "+cn);
+//String cn=fn+" "+ln;
+jLabel3.setText("Welcome ");
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
