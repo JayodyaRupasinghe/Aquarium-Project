@@ -192,7 +192,7 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/IMG20220403090013.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 700, 510));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 700, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -265,13 +265,22 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
         {
            st=conn.createStatement();
            String qry = "SELECT pname, cprice, nprice, sprice, quanty FROM product where pno='"+pno+"'";
-           
            rs=st.executeQuery(qry);
-           String name = jTextField2.setText(pname);
-           
-           rs.next();
-           
-           
+          if (rs.next()) {
+        // Retrieve the value of "pname" from the result set
+       String pname = rs.getString("pname");
+       String cprice=rs.getString("cprice");
+       String nprice=rs.getString("nprice");
+       String sprice=rs.getString("sprice");
+       String quantity=rs.getString("quanty");
+       jTextField2.setText(pname);
+       jTextField3.setText(cprice);
+       jTextField4.setText(nprice);
+       jTextField5.setText(sprice);
+       jTextField6.setText(quantity);
+    } else {
+        
+    }
         }
         catch(Exception e)
         {
@@ -285,8 +294,7 @@ public class PRODUCTUPDATE extends javax.swing.JFrame {
 //        String sprice=jTextField5.getText();
 //        String quanty=jTextField6.getText();
         
-String cn=fn+" "+ln;
-jLabel3.setText("Welcome "+cn);
+
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
